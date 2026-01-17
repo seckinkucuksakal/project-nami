@@ -3,8 +3,9 @@ const repo = "project-nami";
 
 const nextConfig = {
   output: "export",
-  basePath: process.env.NODE_ENV === "production" ? `/${repo}` : "",
-  assetPrefix: process.env.NODE_ENV === "production" ? `/${repo}/` : "",
+  trailingSlash: true,
+  basePath: `/${repo}`,
+  assetPrefix: `/${repo}/`,
   images: { unoptimized: true },
 };
 
